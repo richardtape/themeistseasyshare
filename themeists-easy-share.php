@@ -495,7 +495,7 @@ if( !class_exists( 'ThemeistsEasyShare' ) ):
 				foreach( $this->services as $service => $help )
 				{
 					
-					if( isset( $options[$service] ) && $options[$service] && ( $done[$service] !== true ) )
+					if( array_key_exists( $service, $options ) && isset( $options[$service] ) && $options[$service] )
 					{
 
 						$icon_output = '<a href="' . $options[$service] . '" class="' . $service . '"' . ( ( $options['links'] == 'new_window' ) ? ' target="_blank"' : '' ) . '><img src="' . $icon_path . $service . '.png" alt="' . $service . '" /></a> ';
