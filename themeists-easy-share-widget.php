@@ -112,7 +112,7 @@
 					
 					global $themeists_easy_share;
 					
-					$themeists_easy_share->do_social( $size );
+					$themeists_easy_share->do_social( $size, array(), $args );
 				
 				echo $after_widget;
 		

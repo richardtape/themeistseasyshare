@@ -448,7 +448,7 @@ if( !class_exists( 'ThemeistsEasyShare' ) ):
 
 		/* =================================================================================== */
 		
-		function do_social( $size = '', $services_wl = array() )
+		function do_social( $size = '', $services_wl = array(), $args = false )
 		{
 
 			if( $this->using_themeists_theme )
@@ -500,7 +500,7 @@ if( !class_exists( 'ThemeistsEasyShare' ) ):
 
 						$icon_output = '<a href="' . $options[$service] . '" class="' . $service . '"' . ( ( $options['links'] == 'new_window' ) ? ' target="_blank"' : '' ) . '><img src="' . $icon_path . $service . '.png" alt="' . $service . '" /></a> ';
 
-						echo apply_filters( 'themeists_easy_share_output', $icon_output );
+						echo apply_filters( 'themeists_easy_share_output', $icon_output, $options[$service], $options['links'], $service, $icon_path, $args );
 
 					}
 					$done[$service] = true;
@@ -519,7 +519,7 @@ if( !class_exists( 'ThemeistsEasyShare' ) ):
 
 						$icon_output = '<a href="' . $options[$service] . '" class="' . $service . '"' . ( ( $options['links'] == 'new_window' ) ? ' target="_blank"' : '' ) . '><img src="' . $icon_path . $service . '.png" alt="' . $service . '" /></a> ';
 
-						echo apply_filters( 'themeists_easy_share_output', $icon_output );
+						echo apply_filters( 'themeists_easy_share_output', $icon_output, $options[$service], $options['links'], $service, $icon_path, $args );
 
 					}
 
